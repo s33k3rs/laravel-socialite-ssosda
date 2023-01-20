@@ -23,7 +23,7 @@ class SocialiteSsosdaProvider extends AbstractProvider
         'uid',
         'upn',
         'username',
-		'phone_number',
+	'phone_number',
     ];
 
     /**
@@ -86,10 +86,10 @@ class SocialiteSsosdaProvider extends AbstractProvider
         return (new User())->setRaw($user)->map([
             'id' => $user['sub'],
             'email' => $user['email'],
-			'name' => $user['name'],
+            'name' => $user['name'],
             'nickname' => $user['name'],
             'email' => $user['email'],
-			'no_hp' => $user['phone_number'],
+            'no_hp' => $user['phone_number'],
 #            'email_verified' => $user['email_verified'],
 #            'family_name' => $user['family_name'],
 #            'id' => $user['id'],
